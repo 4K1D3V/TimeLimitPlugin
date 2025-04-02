@@ -1,0 +1,42 @@
+name: TimeLimitPlugin
+version: 1.0.0
+main: gg.kite.core.Main
+api-version: 1.21
+author: KiteGG
+description: Advanced playtime limiter with API
+
+commands:
+  timelimit:
+    description: Manage time limits
+    usage: /<command> <info|exempt|unexempt|set|reset|reload> [player] [value]
+    permission: timelimit.info
+
+permissions:
+  timelimit.info:
+    description: Allows checking remaining time
+    default: true
+  timelimit.exempt:
+    description: Allows exempting players from time limits
+    default: op
+  timelimit.unexempt:
+    description: Allows removing exemptions from players
+    default: op
+  timelimit.set:
+    description: Allows setting custom time limits for players
+    default: op
+  timelimit.reset:
+    description: Allows resetting player playtime
+    default: op
+  timelimit.reload:
+    description: Allows reloading the plugin configuration
+    default: op
+  timelimit.admin:
+    description: Grants access to all commands
+    default: op
+    children:
+      timelimit.info: true
+      timelimit.exempt: true
+      timelimit.unexempt: true
+      timelimit.set: true
+      timelimit.reset: true
+      timelimit.reload: true

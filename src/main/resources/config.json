@@ -1,0 +1,13 @@
+{
+  "max-playtime-minutes": 120,
+  "warning-thresholds": [10, 5, 1],
+  "chat": {
+    "prefix": "&5[&dTimeLimit&5] ",
+    "use-sounds": true
+  },
+  "debug-mode": false,
+  "player-overrides": {
+    "550e8400-e29b-41d4-a716-446655440000": 180
+  },
+  "exempt-players": []
+}
