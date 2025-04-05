@@ -15,6 +15,7 @@
   "usage-set": "&cUsage: /timelimit set <player> <minutes>",
   "usage-reset": "&cUsage: /timelimit reset <player>",
   "invalid-number": "&cInvalid number! Please use a positive integer.",
+
   "help-header": "&e=== TimeLimit Commands ===",
   "help-info": "&7/timelimit info [player] &8- Check remaining time",
   "help-exempt": "&7/timelimit exempt <player> &8- Exempt from limits",

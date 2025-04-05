@@ -15,10 +15,13 @@ public class Main extends JavaPlugin {
     private ConfigManager configManager;
     private TimeTrackerService timeTrackerService;
     private CommandManager commandManager;
+    final String pluginName = "TimeLimit";
+    final String version = getDescription().getVersion();
+    final String author = "KiteGG";
 
     @Override
     public void onEnable() {
-        LOGGER.info("Starting TimeLimitPlugin v1.2.0");
+        LOGGER.info("Starting {} with {} by {}", pluginName, version, author);
         saveResource("config.json", false);
         saveResource("messages.json", false);
 
@@ -32,12 +35,12 @@ public class Main extends JavaPlugin {
         getCommand("timelimit").setTabCompleter(commandManager);
 
         TimeLimitAPI.initialize(timeTrackerService);
-        LOGGER.info("TimeLimitPlugin enabled successfully");
+        LOGGER.info("{} enabled successfully", pluginName);
     }
 
     @Override
     public void onDisable() {
         timeTrackerService.shutdown();
-        LOGGER.info("TimeLimitPlugin disabled");
+        LOGGER.info("{} disabled", pluginName);
     }
 }
